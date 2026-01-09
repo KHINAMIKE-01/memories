@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    box-sizing: inherit;
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+/* section one */
+section#motto{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/background.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.mottoContent{
+     width: 100%;
+     height: 100%;
+     background-color: rgba(222, 215, 215, 0.4);
+     backdrop-filter: blur(3px);
+     display: flex;
+     flex-direction:column;
+     justify-content: center;
+     align-items: center;
+}
+
+.mottoContent > i{
+    width:20%;
+    height: 10%;
+    font-size: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(236, 99, 99);
+    animation-name: love-icon;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2ms;
+    /* background-color: red; */
+}
+
+@keyframes love-icon{
+    0%{
+        transform:translateY(-10px);
+        transform: scale(1.1);
+    }
+    100%{
+        transform:translateY(20px);
+    }
+}
+
+.mottoContent .title{
+    margin-top: 1vh;
+    width: 55vw;
+    height: 8vh;
+    color:rgb(49, 46, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Abril Fatface', serif;
+}
+
+.mottoContent .motive{
+    font-size: 2.7vh;
+    font-family: 'Tangerine', 'serif';
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+@media screen and (min-width: 600px) {
+    .mottoContent > i{
+        width:40%;
+        height: 13%;
+        font-size: 8vh;
+    }
+
+    .mottoContent .title{    
+        width: 65vw;
+        height: 9vh;
+        font-size: 6vh;
+    }
+
+    .mottoContent .motive{
+        font-size: 3.5vh;
+        font-family: 'Tangerine', 'serif';
+        text-shadow: 4px 4px 4px #aaa;
+    }
+
+}
+
+
+/* section 2 */
+:root{
+    --background: linear-gradient(180deg,rgb(255, 212, 212) ,rgb(255, 243, 245) 70%);
+}
+section#imageGallary{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background:var(--background);
+}
+
+#imageGallary > .gallaryTitle{
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageGallary > .gallaryTitle > p{
+    font-family: 'Abril Fatface', serif;
+    font-size: 4vh;
+    color:#5b5959;
+    width: auto;
+    height: 7vh;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+    #imageGallary > .gallaryTitle > p{
+        font-size: 5vh;
+        height: 7.5vh;
+    }
+}
+
+#imageGallary > .gallaryTitle .line{
+    width: 1em;
+    height: .7vh;
+    background-color: rgb(243, 73, 101);
+    border-radius: 1px;
+    margin-top: -1vh;
+    transition: transform .3s ease-in; 
+}
+
+.imageContainer{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-auto-rows: 50rem;
+    grid-template-columns: repeat(AUTO-FIT, minmax(30rem, 1fr));
+    gap: 3rem;
+    justify-content: center;
+    padding: 2rem;
+    align-items: center;
+
+}
+
+@media screen and (min-width: 950px) {
+    .imageContainer{
+        grid-auto-rows: 60rem;
+        grid-template-columns: repeat(AUTO-FIT, minmax(40rem, 1fr));
+    }
+}
+
+.imageContainer > span{
+    width:100%;
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5rem;
+    background-position: center;
+    background-size:cover;
+    background-repeat:space;
+}
+
+.imageContainer #image1{
+    background-image: url("../images/IMG20240620133653.jpg");
+}
+.imageContainer #image2{
+    background-image: url("../images/IMG_20240528_202700.jpg");
+}
+.imageContainer #image3{
+    background-image: url("../images/IMG-20251110-WA0002.jpg");
+}
+.imageContainer #image4{
+    background-image: url("../images/IMG-20251110-WA0003.jpg");
+}
+
+
+/* footer  */
+
+#footer{
+    background: var(--background);
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#footer img{
+    margin: .3rem;
+    height: 3rem;
+}
+
+#footer .endingLine{
+    font-family:'Tangerine', 'serif';
+    font-size: 2.7rem;
+}
+
+@media screen and (min-width: 600px) {
+    #footer img{
+        margin: .3rem;
+        height: 5rem;
+    }
+
+    #footer .endingLine{
+        font-family:'Tangerine', 'serif';
+        font-size: 3rem;
+    }
+}
